@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Produtos - Barbearia Alura</title>
+	<link rel="stylesheet" href="reset.css"><!-- arquivo basico para limpar os estilos que o navegador cria automaticamente, e sempre deve vir antes do css principal, pois dessa forma o reset limpa tudo primeiro para que depois seja feito todo o programa sem nenhuma interferência -->
+	<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+	<header>
+		<div class="caixa">
+			<h1><img src="logo.png"></h1>
+
+			<nav><!-- tag de navegação -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="produtos.html">Produtos</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header> 
+
+	<main><!-- é a parte principal da pagina -->
+		<ul class="produtos">
+			<li>
+				<h2>Cabelo</h2>
+				<img src="cabelo.jpg">
+				<p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir </p>
+				<p class="produto-preco">R$ 25,00</p>
+			</li>
+			<li>
+				<h2>Barba</h2>
+				<img src="barba.jpg">
+				<p class="produto-descricao">Corte e desenho profissional de barba</p>
+				<p class="produto-preco">R$ 18,00</p>
+			</li>
+			<li>
+				<h2>Cabelo + Barba</h2>
+				<img src="cabelo+barba.jpg">
+				<p class="produto-descricao">Pacote completo de cabelo e barba</p>
+				<p class="produto-preco">R$ 35,00</p>
+			</li>
+		</ul>
+	</main>
+
+	<footer><!-- tag do rodapé-->
+		<img src="logo-branco.png">
+		<p class="copyright">&copy;Copyright Barbearia Alura - 2019</p><!--o simbolo do copyright pertence ao unicode -->
+	</footer>
+</body>
+</html>

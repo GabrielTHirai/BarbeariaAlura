@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Contato - Barbearia Alura</title>
+	<link rel="stylesheet" href="reset.css"><!-- arquivo basico para limpar os estilos que o navegador cria automaticamente, e sempre deve vir antes do css principal, pois dessa forma o reset limpa tudo primeiro para que depois seja feito todo o programa sem nenhuma interferência -->
+	<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+	<header>
+		<div class="caixa">
+			<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1><!-- alternativa, para a acessibilidade  -->
+
+			<nav><!-- tag de navegação -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="produtos.html">Produtos</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>  
+
+	<main>
+		<form><!-- tag do formulario -->
+			<label for="nomeesobrenome">Nome e sobrenome</label><!-- label para o input, ou seja, vai servir para descrição do que vai ser feito no input, isso será impresso dentro do site, o for vai andar juntamente com o id, serve como uma "etiqueta" -->
+			<input type="text" id="nomeesobrenome" class="input-padrao" required><!-- se coloca o identificador pois o input é algo unico e exclusivo -->
+			<!-- "required" tag para dizer que o input é obrigatório  -->
+
+			<label for="email">Email</label>
+			<input type="email" id="email"class="input-padrao" required placeholder="seuemail@dominio.com"><!-- o placeholder deixa um texto no input, até que o usuario digite algo-->
+
+			<label for="telefone">Telefone</label>
+			<input type="tel" id="telefone"class="input-padrao" required placeholder="(XX) XXXXX - XXXX">
+
+			<label for="mensagem">Mensagem</label>
+			<textarea cols="70" rows="10" id="mensagem"class="input-padrao" required></textarea><!-- o textarea serve para que o usuário escreva livremente, o cols serve para definir o espaçamento da coluna dentro do textarea, rows serve para as linhas (ou altura) -->
+
+			<fieldset>
+				<legend>Como prefere o nosso contato?</legend>
+				<label for="radioemail"><input type="radio" name="contato" value="email" id="radioemail">Email</label>
+				<!-- pode-se dizer que a função radio é um campo de seleção -->
+
+				<label for="radiotelefone"><input type="radio" name="contato" value="telefone" id="radiotelefone">Telefone</label>
+
+				<label for="radiowpp"><input type="radio" name="contato" value="Whatsapp" id="radiowpp" checked>Whatsapp</label>
+				<!-- o "name" serve para agrupar os input radio, dessa forma quando se clica em um deles e logo após clica em outro, o anterior desmarca automaticamente, a checked serve para deixar marcado uma opção -->
+			</fieldset>
+
+			<fieldset>
+				<legend>Qual horário prefere ser atendido?</legend>
+				<select><!-- caixa de seleção -->
+					<option>Manhã</option><!-- o que vai ser mostrado dentro da caixa -->
+					<option>Tarde</option>
+					<option>Noite</option>
+				</select>
+			</fieldset>
+
+			<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+
+			<input type="submit" value="Enviar Formulário" class="enviar">
+			<!--esse input serve para o criar um botão para enviar o que o usuario informar dentro dos input's anteriores// o value serve para atribuir um valor para esse botãom atribuindo um valor, o programa irá mostrar o que estiver dentro das aspas-->
+		</form>
+
+		<table>
+			<thead>	
+				<tr>
+					<th>Dia</th>
+					<th>Horário</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Segunda</td>
+				<td>8h ~ 20h</td>
+			</tr>
+			<tr>
+				<td>Quarta</td>
+				<td>8h ~ 20h</td>
+			</tr>
+			<tr>
+				<td>Sexta</td>
+				<td>8h ~ 20h</td>
+			</tr>
+			</tbody>
+			
+		</table>
+	</main>
+
+	<footer><!-- tag do rodapé-->
+		<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+		<p class="copyright">&copy;Copyright Barbearia Alura - 2019</p><!--o simbolo do copyright pertence ao unicode -->
+	</footer>
+</body>
+</html>

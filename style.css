@@ -1,0 +1,318 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{/* deixa a parte do cabeçalho com o fundo cinza */
+	background: #BBBBBB;
+	padding: 20px 0;/* espaçamento interno */
+}
+
+.caixa{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;/* 0 para cima e para baixo, direita e esquerda automatico */
+}
+
+nav{
+	position: absolute;
+	/* o position serve para mudar a posição do ponto inicial.
+	com o position relative o ponto inicial vai mudar a partir do ponto inicial, dessa forma, todo o comando de "Top", "right" etc
+	vai partir do ponto inicial
+	no position absolute seria um posicionamento absoluto sobre a pagina toda, ou seja, os comandos de "Top" etc vão ser a partir da pagina */
+	top: 110px;
+	right: 0;
+}
+
+nav li{/* vai mudar toda a parte da lista */
+	display: inline;/* não vai existir quebra de linha */
+	margin: 0 0 0 15px;/* espaçamento externo, no qual o primeiro numero é o topo,
+						segundo numero é para direita, terceiro numero é para baixo e por ultimo para esquerda */
+}
+
+nav a {/* serve para o texto que está escrito na tag "a" */
+	text-transform: uppercase;/* muda o texto para maiusculo */
+	color: #000000;/* muda a cor do texto para preto */
+	font-weight: bold;/* deixa o texto em negrito */
+	font-size: 22px; /* aumenta o tamanho da fonte */
+	text-decoration: none;/* nenhuma decoração no texto, ou seja, o texto não vai mais estar sublinhado */
+}
+
+nav a:hover{/*quando o mouse estiver por cima dos links de navegação*/
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;/* espaçamento interno que vai significar 50px para cima e para baixo, 0 para os lados */
+}
+
+.produtos li{
+	display: inline-block;
+	text-align: center;
+	width: 30%;/*largura*/
+	vertical-align: top;
+	margin: 0 1.5%; /*espaçamento externo de 0 para cima e para baixo, e 1.5% para os lados*/
+	padding: 30px 20px;
+	box-sizing: border-box;/*com isso, os pixels do espaçamento inteiro estão dentro da largura de 30%*/
+	border: 2px solid #000000;
+	/*existe mais estilos de borda alem do solid, temos o dashed(tracejado) e o dotted(pontilhado)*/
+	border-radius: 10px;/*ele arredonda as pontas da borda*/
+}
+
+.produtos li:hover{
+	border-color: #C78C19;
+}
+
+.produtos li:active{/*comportamento ativo, quando o mouse ta pressionado*/
+	border-color: #088C19;
+}
+
+.produtos li:hover h2{/*vai mudar somente no h2*/
+	font-size: 40px;
+}
+
+.produtos h2{
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
+.produto-descricao{
+	font-size: 18px;
+
+}
+
+.produto-preco{
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0 0;
+}
+
+footer{
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+.copyright{
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+form{
+	margin: 40px 0 ;
+}
+
+form label, form legend{
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao{/* dessa forma da para aproveitar o css de outro form, colocando apenas uma "," */
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px; 	
+	width: 50%;
+}
+
+.checkbox{
+	margin: 20px 0;
+}
+
+.enviar{
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius:5px ;
+	transition: 1s all;/* transição de 1 segundo o background */
+	cursor: pointer;/* quando o cursor do mouse estiver por cima do botão, vai mudar para mãozinha */
+}
+
+.enviar:hover{
+	background: darkorange;
+	transform: scale(1.2);
+}
+
+table{
+	margin: 20px 0 40px;
+}
+
+thead{
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th{
+	border: 1px solid #000000;
+	padding: 8px 15px ;
+}
+
+/* CSS da Página inicial */
+
+.banner{
+	width: 100%;
+}
+	
+.titulo-principal{
+	text-align: center;
+	font-size: 2em;/* e "em" significa que é x vezes do tamanho base, do tamanho inicial
+	exemplo, se a fonte basica é 15px, se colocar 2 em, a conta será (15px*2em) que vai resultar em 30px */
+	margin: 0 0 1em;
+	clear: left; /* limpa o float */
+}
+
+/* Pseudo-elemento, codigos que tem no css e não tem no html, no exemplo abaixo será feito somente na primeira letra do titulo principal */
+.titulo-principal:first-letter{
+	font-weight: bold;
+}
+
+/* isso serve para colocar algo antes do que está dentro do titulo-principal */
+/*.titulo-principal:before{
+	content: "[";
+}
+
+/* isso serve para colocar algo depois do que está dentro do titulo-principal 	
+.titulo-principal:after{
+	content: "]";
+}
+*/
+/*
+nesse exemplo será feito somente na primeira linha
+p:first-line{
+	font-style: italic;
+}
+*/
+.principal{
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p{
+	margin: 0 0 1em;
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em{
+	font-style: italic;
+}
+
+.utensilios{
+	width: 120px;
+	float: left;/*o elemento "descola" da página mas o que seria a sua sombra, 
+	continua sendo ocupada virtualmente, isto é, o texto respeita esse espaço ocupado.*/
+	margin: 0 20px 20px 0;
+}
+
+.mapa{
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888);/* gradient é a transição de uma cor para a outra */
+}
+
+.mapa-conteudo{
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios{
+	padding: 3em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios{
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens{
+	line-height: 1.5 ;/* altura da linha */
+}
+
+/*pseudoelemento*/
+.itens:first-child{/*1º irmão da lista, para o ultimo elemento pode ser o last-child, ou nth-child(4) que seria o 4º elemento*/
+	font-weight: bold;
+}
+
+.itens:before{
+	content: ★;
+}
+
+.imagem-beneficios{
+	width: 60%;
+}
+
+.video{
+	width: 560px;
+	margin: 2em auto;
+}
+/*
+main p {
+	background: red;
+}
+Se cria um problema, ja que o background vai ser aplicado para todos os parágrafos da main, ou seja, todo e 
+qualquer <p> vai mudar o background.
+
+Para arrumar isso, será inserido o ">", dessa forma o código vai ficar: main > p{}
+Com isso ele vai pegar todos os filhos diretos da main
+*/
+/*
+img + p{
+	background: blue;
+}
+Aqui o fundo que irá ser mudado vai ser o primeiro irmão depois da imagem, a "img" serve como âncora para o seu irmão p
+*/
+
+/*
+img ~ p{
+	background: black;
+}
+
+Aqui todo o paragrafo após a imagem vai ser mudada
+*/
+/*
+.principal p:not(#missao){
+	background: yellow;
+}
+o ID "missao" é deixado de lado na hora da execução do código, ela é excluida
+*/
+
+@media screen and (max-width: 480px){
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+		width: auto;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+	nav{
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios{
+		width: 100%;
+	}
+}

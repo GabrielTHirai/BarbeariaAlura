@@ -1,0 +1,2 @@
+Primeiramente, temos que pensar que cada dispositivo possui uma tela, tablet possui um tamanho de tela, o desktop outro, então temos que adaptar para cada um dos dispositivos.
+A propriedade calc é para calculo no CSS. Por exemplo calc(40% - 26px). o Proprio CSS vai fazer o calculo
